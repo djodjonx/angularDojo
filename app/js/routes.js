@@ -1,5 +1,5 @@
 angular.module('app')
-    .config(function($stateProvider, $urlRouterProvider) {
+        .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('web', {
                 abstract: true,
@@ -8,6 +8,11 @@ angular.module('app')
             .state('web.home', {
                 url: '/',
                 templateUrl: 'home.html'
+            })
+            .state('web.todoList', {
+                url: '/todoList',
+                templateUrl: 'todoList.html',
+                controller: 'MainController'
             });
 
         $urlRouterProvider.otherwise('/');
